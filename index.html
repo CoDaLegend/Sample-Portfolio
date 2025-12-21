@@ -10,9 +10,9 @@
     body { font-family: Arial, sans-serif; background-color: grey; }
 
     section {
-      padding: 100px 20px;
+      padding: 20px 20px;
       text-align: left;
-      min-height: 100vh;
+      min-height: 100%;
       background-color: white;
     }
 
@@ -83,12 +83,28 @@
 
     /* Full Stack*/
 
+    .first{
+      width: 100%;
+      height: 100%;
+      display: grid;
+      grid-template-columns: repeat(Auto-Fit, minmax(400px, 1fr));
+      grid-template-rows: repeat(4, 320px);
+      justify-content: center;
+      align-items: center;
+      margin-top: 30px;
+      margin-bottom: 30px;
+      gap: 10px;
+    }
+    @media(min-width:1025px){
+      .first{
+        height: 105vh;
+      }
+    }
+    
     .full{
         background-color: whitesmoke;
-        width: 100%;
-        height: 100%;
+        height: 50vh;
         padding: 10px;
-        margin-top: 50px;
         border: 1px solid rgba(128, 128, 128, 0.192);
     }
 
@@ -130,10 +146,11 @@
         height: 30px;
         width: 100%;
         display: flex;
-        flex-direction: row;
+        flex-wrap: wrap;
         margin-top: 0px;
         gap: 15px;
         margin-top: 5px;
+        margin-bottom: 20px;
     }
 
     button{
@@ -146,7 +163,7 @@
         justify-content: center;
         align-items: center;
         text-align: center;
-        margin-left: 100px;
+        margin-left: 0px;
         border: 0px;
         font-size: 12px;
     }
@@ -161,6 +178,78 @@
         width: 300px;
         height: 300px;
         margin-left: 15px;
+    }
+
+    .others{
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    /*2nd Phase*/
+
+    .second{
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    @media (min-width: 1025px){
+      .second{
+        width: 50%;
+        margin-left: 320px;
+      }
+    }
+
+    .first1{
+      width: 100%;
+      height: 100%;
+      display: grid;
+      grid-template-columns: repeat(Auto-Fit, minmax(400px, 1fr));
+      grid-template-rows: repeat(4 200px);
+      justify-content: center;
+      align-items: center;
+      margin-top: 30px;
+      margin-bottom: 0px;
+      gap: 10px;
+    }
+    @media(min-width:1025px){
+      .first1{
+        height: 60vh;
+      }
+    }
+
+    .full1{
+        background-color: whitesmoke;
+        height: 30vh;
+        padding: 10px;
+        border: 1px solid rgba(128, 128, 128, 0.192);
+    }
+
+    /*Portfolio*/
+
+    .portclose{
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      padding: 10px;
+    }
+
+    .portmini{
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      flex: 40%;
+      min-width: 300px;
     }
 
 
@@ -202,13 +291,14 @@
   <h2>What I Do<sub style="color: red;font-size: 10px;">*</sub> </h2><br>
 
   <p>
-    I offer a comprehensive range of services to help your business thrive in the digital landscape.
+    I offer a comprehensive range of services to help your business thrive in the digital landscape. <br>
     From technical development to creative design, I bring strategic thinking to every project.
   </p>
 
   <!--Full Stack-->
 
-  <div class="full">
+  <div class="first">
+    <div class="full">
     <div class="mini">
          <image src="image/lessth&greatertha.jpg"></image>
     </div><br>
@@ -266,8 +356,8 @@
 
     <p style="font-size: 14px;">
         Creating intuitive, user-centered designs that solve real problems. Through research, prototyping
-        and testing, I craft....... 
-    </p><br>
+        and testing, I craft digital experiencs that users love and businesses benefit from.
+    </p><br><br>
 
     <div class="smallb">
         <div class="small">Brand Strategy</div>
@@ -276,14 +366,76 @@
     </div>
     <div class="smallb">
         <div class="small">MongoDB</div>
-    </div></div><br><br>
+    </div></div>
 
-    <p style="text-align: center;">Need s custom solution? Lest's discuss your project.</p><br>
+    <!--Logo-->
+
+    <div class="full">
+    <div class="mini">
+        <image src="image/ui&ux.jpg"></image>
+    </div><br>
+
+    <h2>Logo Design</h2><br>
+
+    <p style="font-size: 14px;">
+        Designing  memorable logos that cpature your brand essence. Each logo is crafted with strategic 
+        thinking, ensuring it works across all platforms while remaining timeless and dinstinctive.
+    </p><br><br><br>
+
+    <div class="smallb">
+        <div class="small">Brand Strategy</div>
+        <div class="small">Market Research</div>
+        <div class="small">Visual Identity</div>
+    </div>
+    <div class="smallb">
+        <div class="small">MongoDB</div>
+    </div></div>
+    
+
+    <!--Social Media-->
+
+    <div class="full">
+    <div class="mini">
+        <image src="image/ui&ux.jpg"></image>
+    </div><br>
+
+    <h2>Social Media Design</h2><br>
+
+    <p style="font-size: 14px;">
+        Creating scroll-stopping social media contents that engages and converts. From templates to 
+        campaigns, I design cohesive visual contents that amplifies your brand across all platforms.
+    </p><br><br><br>
+
+    <div class="smallb">
+        <div class="small">Instagram</div>
+        <div class="small">LinkedIn</div>
+        <div class="small">Twitter (X)</div>
+        <div class="small">Facebook</div>
+    </div>
+    <div class="smallb">
+        <div class="small">Content Strategy</div>
+    </div></div><br><br>
+    </div>
+    </div>
+
+
+    <!--Need-->
+
+   <div class="others">
+     <p style="text-align: center;">Need s custom solution? Lest's discuss your project.</p><br>
 
     <button><b>START A CONVERSATION</b></button><br><br><br>
+   </div>
+    </section>
 
+
+    <!--Portfolio (SELECTED WORK)-->
+
+    <section>
+      
     <!--Portfolio-->
 
+    
     <b style="color: orange;font-size: 12px;">PORTFOLIO</b><br><br>
 
     <h2>Selected Works<sub style="color: red;font-size: 10px;">*</sub> </h2><br>
@@ -291,9 +443,7 @@
     <div class="smallb">
         <div class="small1" style="background-color: orangered;width: 50px;">ALL</div>
         <div class="small1">WEB DEVELOPMENT</div>
-        <div class="small1">BRAND IDENTITY</div>
-    </div>
-    <div class="smallb">
+        <div class="small1">BRAND IDENTITY</div>  
         <div class="small1">UI/UX DESIGN</div>
         <div class="small1">SOCIAL MEDIA</div>
     </div><br><br>
@@ -302,34 +452,227 @@
 
     <!--Social Media-->
 
-    <div class="full">
-      
-      <image src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMVDNC_QqofktaX0h_YDH9XtXbq3CebPqooA&s" style="height: 300px;width: 100%;"></image><br><br> 
+    <div class="portclose">
 
-      <h2>Social Campaign Design</sub></h2><br>
+    <!--Image 1-->
+      
+    <div class="portmini">
+    <image src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMVDNC_QqofktaX0h_YDH9XtXbq3CebPqooA&s" style="height: 300px;width: 100%;"></image> 
+
+    <div class="full1">
+
+    <h1 style="color: orange;font-size: 12px;">Web Development</h2><br>
+
+     <h2>E-Commerce Platform</h2><br> 
 
     <p style="font-size: 14px;">
-        6-month social media campaign design for a fashion brands's product launch across all platforms.
+        A fully functional e-commerce platform with payment integration, inventory management, and analytical
+        dashboard.
     </p><br>
 
     <div class="smallb">
-        <div class="small">Instagram</div>
-        <div class="small">Content Design</div>
-        <div class="small">Campaign</div>
+        <div class="small">React</div>
+        <div class="small">Nodejs</div>
+        <div class="small">MongoDB</div>
+        <div class="small">Stripe</div>
     </div>
-    </div><br><br><br>
+    </div>
+    </div><br><br>
 
-    <p style="text-align: center;">Want to see more projects or discuss your ideas?</p><br>
+    <!--Image 2-->
+    
+    <div class="portmini">
+    
+      <image src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMVDNC_QqofktaX0h_YDH9XtXbq3CebPqooA&s" style="height: 300px;width: 100%;"></image> 
 
-    <button style="background-color: transparent;color: black;border: 2px solid black;margin-left: 100px;">
+    <div class="full1">
+
+    <h1 style="color: orange;font-size: 12px;">BRAND IDENTITY</h2><br>
+
+     <h2>TechStart Brand Identity</h2><br> 
+
+    <p style="font-size: 14px;">
+        Complete brand identity system for technology startup, including logo, color palette, and brand 
+        guidelines.
+    </p><br>
+
+    <div class="smallb">
+        <div class="small">Branding</div>
+        <div class="small">Logo Design</div>
+        <div class="small">Guidelines</div>
+    </div>
+    </div>
+    </div><br><br>
+
+    <!--Image 3-->
+
+    <div class="portmini">
+
+    <image src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMVDNC_QqofktaX0h_YDH9XtXbq3CebPqooA&s" style="height: 300px;width: 100%;"></image> 
+
+    <div class="full1">
+
+    <h1 style="color: orange;font-size: 12px;">UI/UX DESIGN</h2><br>
+
+     <h2>SaaS Dashboard</h2><br> 
+
+    <p style="font-size: 14px;">
+        Intuitive dashboard interface for a SaaS analytics platform with complex data visualization.
+    </p><br>
+
+    <div class="smallb">
+        <div class="small">Figma</div>
+        <div class="small">UI Design</div>
+        <div class="small">Data Viz</div>
+    </div>
+    </div>
+    </div><br><br>
+
+    <!--Image 4-->
+
+    <div class="portmini">
+    <image src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMVDNC_QqofktaX0h_YDH9XtXbq3CebPqooA&s" style="height: 300px;width: 100%;"></image> 
+
+    <div class="full1">
+
+    <h1 style="color: orange;font-size: 12px;">WEB DEVELOPMENT</h2><br>
+
+     <h2>FinTech Mobile App</h2><br> 
+
+    <p style="font-size: 14px;">
+        Progressive web app for finacial management with real-time transaction tracking and budgeting 
+        tools.
+    </p><br>
+
+    <div class="smallb">
+        <div class="small">React Native</div>
+        <div class="small">Firebase</div>
+        <div class="small">API Integration</div>
+    </div>
+    </div>
+    </div>
+    </div><br><br>
+
+    <!--Collaboration-->
+
+    <div class="others">
+      <p style="text-align: center;">Want to see more projects or discuss your ideas?</p><br>
+
+    <button style="background-color: transparent;color: black;border: 2px solid black;margin-left: 0px;">
         LET'S COLLABORATE
     </button>
-    
-
-
-
+    </div>
 
 </section>
+
+
+
+
+<!--Second-->
+
+<section style="margin-top: 10px;">
+  <div class="second"><b style="color: orange;text-align: center;font-size: 14px;">WHY CHOOSE ME</b><br>
+    
+    <b style="font-size: 22px;">The Right Partner</b><br>
+
+    <h>Choosing the right partner is crucial for your projects's success. Here's why businesses worldwide
+      trust me with their most important digital initiatives.  
+    </h>
+  </div>
+
+  <div class="first1">
+    <!--Fast-->
+
+  <div class="full1">
+    <div class="mini">
+        <image src="image/ui&ux.jpg"></image>
+    </div><br>
+
+    <h4>Fast & Efficient</h4><br>
+
+    <p style="font-size: 14px;">
+       I deliver high-quality work within agrred timelines without compromising on excellence.
+       Time is money, and i respect both. 
+    </p><br>
+  </div>
+
+  <!--Quality-->
+  
+    <div class="full1">
+    <div class="mini">
+        <image src="image/ui&ux.jpg"></image>
+    </div><br>
+
+    <h4>Quality Assurance</h4><br>
+
+    <p style="font-size: 14px;">
+      Rigorous testing, attention to detail, and commitment to excellence ensure every deliverble meets
+      and the highest standards.
+    </p><br>
+  </div>
+
+  <!--Results-->
+
+  <div class="full1">
+    <div class="mini">
+        <image src="image/ui&ux.jpg"></image>
+    </div><br>
+
+    <h4>Results-Driven</h4><br>
+
+    <p style="font-size: 14px;">
+       Every projects is approached with your business goals in mind. I focus on solutions that drive 
+       measurable results and ROI.
+    </p><br>
+  </div>
+
+  <!--Always-->
+
+    <div class="full1">
+    <div class="mini">
+        <image src="image/ui&ux.jpg"></image>
+    </div><br>
+
+    <h4>Always Available</h4><br>
+
+    <p style="font-size: 14px;">
+      Working remotely across timezones, I maintain flexible hours to accomodate global clients and ensure
+      smooth communications.
+    </p><br>
+  </div>
+
+  <!--Collaborative-->
+
+  <div class="full1">
+    <div class="mini">
+        <image src="image/ui&ux.jpg"></image>
+    </div><br>
+
+    <h4>Collaborative Approach</h4><br>
+
+    <p style="font-size: 14px;">
+      I work closely with you throughout the process,ensuring your vision is realized while adding strategic
+      value at every step. 
+    </p><br>
+  </div>
+
+  <!--End-->
+
+    <div class="full1">
+    <div class="mini">
+        <image src="image/ui&ux.jpg"></image>
+    </div><br>
+
+    <h4>End-to-End Solutions</h4><br>
+
+    <p style="font-size: 14px;">
+      From strategy to execution and maintenance, I provide comprehensive solutions so you don't need 
+      multiple vendors.
+    </p><br>
+  </div>
+  </div>
+</section>
+
 
 
 <script>
